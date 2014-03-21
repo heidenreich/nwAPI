@@ -7,6 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>nwAPI</title>
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -66,7 +67,7 @@
             <div class="inner">
                 <div class="container">
                     <div class="right-content">
-                        <canvas id="myChart" width="200" height="200"></canvas>
+                        <canvas id="myChart" width="400" height="400"></canvas>
                     </div>
                     <div class="left-content">
                         <h3>What's possible?</h3>
@@ -91,7 +92,7 @@
                 <p> The source code is <a href="">available on Github</a>
                 <p>The following request:</p>
 
-                <pre class='prettyprint'>curl -X GET http://tiny-pizza-server.herokuapp.com/collections/weather</pre>
+                <pre class='api-print'>curl -X GET http://tiny-pizza-server.herokuapp.com/collections/weather</pre>
 
                 <p>will return a JSON object for the latest report:</p>
                 <p class="center">
@@ -102,28 +103,30 @@
         </section>
         <footer>
             <div class="container">
-                <p class="center">Special Thanks to:</p>
+                <p class="thanks">Special Thanks to:</p>
                 <div class="item">
                     <a href="" target="_blank">
-                        <img src="" />
+                        <img class="logos" src="images/sgier-johnny-five.jpg" />
                     </a>
                 </div>
                 <div class="item">
                     <a href="" target="_blank">
-                        <img src="" title="" />
+                        <img class="logos" src="images/Arduino_logo_pantone.png" title="" />
                     </a>
                 </div>
-                <div class="item last">
+              <!--   <div class="item last">
                     <p><a href="" target="_blank">a link somewhere</a><br />
                     <a href="" target="_blank">perhaps another link</a></p>
                 </div>
-                <div class="clear"></div>
+                <div class="clear"></div> -->
             </div>
         </footer>
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
-        <script src="Chart.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
+        <script src="bower_components/chartjs/Chart.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

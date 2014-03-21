@@ -135,6 +135,14 @@ header {
     height: 100%;
 }
 
+//getting started section
+
+.api-print{
+    font-family: monospace, sans-serif;
+}
+
+//footer
+
 footer {
     position: relative;
     width: 100%;
@@ -142,13 +150,30 @@ footer {
     padding: 20px 0;
 }
 
+.thanks{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    // text-transform: uppercase;
+
+}
+
+.item {
+    display: inline-block;
+}
+
+.logos{
+    height: 100px;
+    margin-left: 40px;
+}
 // Buttons
 
 .button {
     display: inline-block;
     padding: 12px 25px;
     background: #FF9800;
-    
     font-family: 'Open Sans', sans-serif;
     color: white;
     font-size: 20px;
