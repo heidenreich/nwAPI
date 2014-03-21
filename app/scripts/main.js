@@ -4,23 +4,23 @@ function assignValues (nextData) {
 	return [
 		{
 			value: Number(nextData[0].temperature),
-			color: '#D97041'
+			color: '#AFFF00'
 		},
 		{
 			value: Number(nextData[1].temperature),
-			color: '#C7604C'
+			color: '#E89008'
 		},
 		{
 			value: Number(nextData[2].temperature),
-			color: '#21323D'
+			color: '#FF044A'
 		},
 		{
 			value: Number(nextData[3].temperature),
-			color: '#9D9B7F'
+			color: '#1400E8'
 		},
 		{
 			value: Number(nextData[4].temperature),
-			color: '#7D4F6D'
+			color: '#09FFCF'
 		},
 		{
 			value: Number(nextData[5].temperature),
