@@ -32,7 +32,7 @@ $.get('http://tiny-pizza-server.herokuapp.com/collections/weather', function(res
    var options = {
       animation: true,
       scaleOverride: true,
-      scaleSteps: 30,
+      scaleSteps: 15,
       scaleStepWidth: 0.5,
       scaleStartValue: 60
    };

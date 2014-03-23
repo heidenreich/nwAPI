@@ -108,10 +108,10 @@ header {
     text-transform: uppercase;
     margin-top: 20px;
     li{
-    display: inline;
-    margin-left: 60px;
-    font-size: 16px;
-}
+        display: inline;
+        margin-left: 60px;
+        font-size: 16px;
+    }
 }
 
 //learn more sectiom
@@ -185,14 +185,18 @@ footer {
     background: #FF9800;
     font-family: 'Open Sans', sans-serif;
     color: white;
+    margin-left: 120px;
     font-size: 20px;
     text-decoration: none;
     text-transform: uppercase;
+     -webkit-transition: all .2s ease-in-out;
 }
 
 .button:hover {
-    background: #862626;
+    background: #0067bd;
+    color: white;
     text-decoration: none;
+     -webkit-transform: scale(1.1);
 }
 
 
