@@ -2,29 +2,33 @@ console.log('its chart time');
 
 function assignValues(nextData) {
    return [{
-      value: Number(nextData[0].temperature),
+      value: parseInt(nextData[0].temperature),
       color: '#AFFF00'
    }, {
-      value: Number(nextData[1].temperature),
+      value: parseInt(nextData[1].temperature),
       color: '#E89008'
    }, {
-      value: Number(nextData[2].temperature),
+      value: parseInt(nextData[2].temperature),
       color: '#FF044A'
    }, {
-      value: Number(nextData[3].temperature),
+      value: parseInt(nextData[3].temperature),
       color: '#1400E8'
    }, {
-      value: Number(nextData[4].temperature),
+      value: parseInt(nextData[4].temperature),
       color: '#09FFCF'
    }, {
-      value: Number(nextData[5].temperature),
+      value: parseInt(nextData[5].temperature),
       color: '#FFFA00'
    }];
-}
+};
 
 $.get('http://tiny-pizza-server.herokuapp.com/collections/weather', function(response) {
    var nextData = response;
-   console.log(nextData[9]);
+   console.log('next data is', nextData);
+   var downstairs = _.findWhere(nextData, function(weather) {
+      return weather.location === 'downstairs'
+   });
+   console.log(downstairs);
    var data = assignValues(nextData);
 
    //-- Make the chart once you have the data

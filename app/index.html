@@ -37,7 +37,7 @@
                                 &ltNW&gt
                             </div>
                             <div class="text">
-                                Next Weather Data
+                                Next Weather API
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
         <section class="learn-more" id="learn_more">
             <div class="container">
                 <h2>What exactly is the &ltNW&gt API?</h2>
-                <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.The NW API is my final project for the Iron Yard Aademy Front End Engineering course.  Who is the my in the previous sentence you ask? I am Todd Heidenreich and I have spent endless days and nights in the Next building, while never once taking off my coat. </p>
+                <p >The &ltNW&gt API is my final project for the Iron Yard Aademy Front End Engineering course.  Who is the my in the previous sentence you ask? I am Todd Heidenreich and I have spent endless days and nights in the Next building, while never once taking off my coat. With the guidance of Mason Stewart I assembled an army of Arduino units (see awsome action photo below) with the sole purpose of detailing the frigid conditions I have endured to achieve coding excellence. With the use of Rick Waldron’s Johnny-Five for NodeJS, and the “StandardFirmata” software package for Arduino, I programmed the Arduino units to collect wether data.  These units were placed throughout the Next Innocation Center and began to posting data to a dedicated heroku server.</p>
                 
                 <img src="images/connected-arduino-uno.jpg" class="img-responsive arduino-pic" alt="Responsive image">
                 
@@ -71,14 +71,14 @@
                     </div>
                     <div class="left-content">
                         <h3>What's possible?</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>There are four data points currently collected with Arduino units.  With the addition of more sensors the units could collect a wider array of data points.</p>
                         <ul>
                             <li>Temperature</li>
                             <li>Light Intensity</li>
                             <li>Location</li>
                             <li>Data Collection Time</li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>On the right is a chart utilizing Chart.JS showing the current temperature in the NEXT Innovation Center.</p>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -89,14 +89,15 @@
                 <h2>Getting started with the &ltNW&gt API</h2>
                 <h4>Start building an application to let the builing manager know you are very, very cold with actual data collected over time.</h4>
                     
-                <p> The source code is <a href="">available on Github</a>
+                <!-- <p> The source code is <a href="">available on Github</a> -->
                 <p>The following request:</p>
 
                 <pre class='api-print'>curl -X GET http://tiny-pizza-server.herokuapp.com/collections/weather</pre>
 
-                <p>will return a JSON object for the latest report:</p>
+                <p>will return a JSON object with the following format:</p>
 
-                <pre class="api-print"> {
+                <pre class="api-print"> 
+                    {
                       "lightIntensity":"173",
                       "temperature":"65.93",
                       "location":"lecture hall",
@@ -104,10 +105,10 @@
                       "_id":"532c2c6b7cc80c0200000020"
                    },
                 </pre>
-                <p class="center">
+                <div class="center">
                     <a href="https://github.com/heidenreich/next" class="button">Data Collection Code</a>
                     <a href="https://github.com/heidenreich/nwAPI" class="button">&ltNW&gt API Code</a>
-                </p>
+                </div>
             </div>
         </section>
         <footer>
