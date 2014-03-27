@@ -1,4 +1,4 @@
-$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
@@ -9,14 +9,10 @@ html, body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.head-img{
-   margin-left: 350px;
-}
-
 a{
     color: #0067bd;
 }
-
+    
 .container {
     position: relative;
     width: 960px;
@@ -27,7 +23,7 @@ a{
 //font styles
 
 p {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 h2 {
@@ -119,20 +115,28 @@ header {
     }
 }
 
-//learn more sectiom
+.next-pic{
+
+}
+
+//learn more section
 
 .learn-more {
     position: relative;
     padding: 20px 0;
 }
 
-.arduino-pic {
-    vertical-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 160px;
+.todd-pic{
+    margin-bottom: 60px;
+    margin-top: 40px;
+    // border-image-slice: 15 15 15 15 fill; 
+    // border-image-width: 10px 10px 10px 10px; 
+    // border-image-outset: 0px 0px 0px 0px; 
+    // border-image-repeat: round round; 
+    // border-image-source: url("https://mdn.mozillademos.org/files/6011/border-image-3.png");
 }
-// whats possible
+
+// whats possible section
 
 .whats-possible {
     position: relative;

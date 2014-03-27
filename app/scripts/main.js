@@ -3,12 +3,12 @@ console.log('its chart time');
 function assignValues(nextData) {
     return [{
         value: parseInt(_.find(nextData, function(weather) {
-            return weather.location === 'downstairs';
+            return weather.location === 'conference room';
         }).temperature),
         color: '#AFFF00'
     }, {
         value: parseInt(_.find(nextData, function(weather) {
-            return weather.location === 'next lobby';
+            return weather.location === 'lobby';
         }).temperature),
         color: '#E89008'
     }, {
@@ -18,15 +18,9 @@ function assignValues(nextData) {
         color: '#FF044A'
     }, {
         value: parseInt(_.find(nextData, function(weather) {
-            return weather.location === 'work space';
+            return weather.location === 'workspace de Todd';
         }).temperature),
         color: '#1400E8'
-    }, {
-        value: parseInt(nextData[4].temperature),
-        color: '#09FFCF'
-    }, {
-        value: parseInt(nextData[5].temperature),
-        color: '#FFFA00'
     }];
 }
 
@@ -34,34 +28,16 @@ $.get('http://tiny-pizza-server.herokuapp.com/collections/weather', function(res
     var nextData = response;
     // console.log('next data is', nextData);
 
-    var downstairs = _.find(nextData, function(weather) {
-        return weather.location === 'downstairs';
-    });
-
-    var nextLobby = _.filter(nextData, function(weather) {
-        return weather.location === 'next lobby';
-    });
-
-    var lectureHall = _.find(nextData, function(weather) {
-        return weather.location === 'lecture hall';
-    });
-
-    var workSpace = _.find(nextData, function(weather) {
-        return weather.location === 'work space';
-    });
-
-    console.log('hello', nextLobby);
-
     var data = assignValues(nextData);
 
     //-- Make the chart once you have the data
 
     var options = {
         animation: true,
-        scaleOverride: true,
-        scaleSteps: 16,
-        scaleStepWidth: 0.5,
-        scaleStartValue: 62
+        // scaleOverride: true,
+        // scaleSteps: 16,
+        // scaleStepWidth: 0.5,
+        // scaleStartValue: 62
     };
 
     var c = $('#myChart');
