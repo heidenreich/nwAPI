@@ -8,16 +8,16 @@ function assignValues(nextData) {
             fillColor: "rgba(255,152,0,1)",
             strokeColor: "rgba(220,220,220,1)",
             data: [
-                parseInt(_.find(nextData, function(weather) {
+                parseFloat(_.find(nextData, function(weather) {
                     return weather.location === 'lecture hall';
                 }).temperature),
-                parseInt(_.find(nextData, function(weather) {
+                parseFloat(_.find(nextData, function(weather) {
                     return weather.location === 'conference room';
                 }).temperature),
-                parseInt(_.find(nextData, function(weather) {
+                parseFloat(_.find(nextData, function(weather) {
                     return weather.location === 'lobby';
                 }).temperature),
-                parseInt(_.find(nextData, function(weather) {
+                parseFloat(_.find(nextData, function(weather) {
                     return weather.location === 'workspace de Todd';
                 }).temperature)
             ]
@@ -40,7 +40,11 @@ $.get('http://tiny-pizza-server.herokuapp.com/collections/weather', function(res
         scaleFontColor: "#fff",
         barValueSpacing: 5,
         barDatasetSpacing: 1,
-        scaleFontFamily: "'Open Sans'"
+        scaleFontFamily: "'Open Sans'",
+        scaleOverride: true,
+        scaleSteps: 30.5,
+        scaleStepWidth: .5,
+        scaleStartValue: 59.5,
 
     };
 
