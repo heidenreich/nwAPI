@@ -27,7 +27,7 @@ function assignValues(nextData) {
 
 
 $.get('http://tiny-pizza-server.herokuapp.com/collections/weather', function(response) {
-    var nextData = response;
+    nextData = response;
     // console.log('next data is', nextData);
 
     var data = assignValues(nextData);
