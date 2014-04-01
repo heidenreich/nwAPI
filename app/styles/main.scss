@@ -212,7 +212,7 @@ footer {
     background: #FF9800;
     font-family: 'Open Sans', sans-serif;
     color: white;
-    margin-left: 90px;
+    margin-left: 35px;
     font-size: 20px;
     text-decoration: none;
     text-transform: uppercase;
@@ -227,12 +227,26 @@ footer {
 }
 
 .center {
-    margin: 70px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .inner{
     margin-top: 50px;
     // margin-bottom: 50px;
+}
+
+//// chartville
+
+.chart-title{
+    margin: 10px 0px 10px 105px;
+    font-size: 80px;
+    color: #0067bd;
+}
+
+.chart-key{
+    margin: 10px 0px 0px 60px;
+    font-size: 30px;
 }
 
 .blue{
@@ -241,5 +255,9 @@ footer {
 
 .orange {
     color: #FF9800;
+}
+
+.purple {
+    color: purple;
 }
 
