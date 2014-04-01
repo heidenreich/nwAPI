@@ -13,23 +13,23 @@
 function assignValues(nextData) {
   return {
 
-    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+    labels: ["-36 sec", "-32 sec", "-28 sec", "-24 sec", "- 20 sec", "-16 sec", "-12 sec", "-8 sec", "-4 sec", "now"],
     datasets: [{
         fillColor: "rgba(220,220,220,0.1)",
         strokeColor: "#0067bd",
-        pointColor: "rgba(220,220,220,1)",
+        pointColor: "#0067bd",
         pointStrokeColor: "#fff",
-        data: [65, 67, 66, 67, 68, 69, 67, 65, 63, 64]
+        data: tempThree
       }, {
         fillColor: "rgba(151,187,205,0.1)",
         strokeColor: "#FF9800",
-        pointColor: "rgba(151,187,205,1)",
+        pointColor: "#FF9800",
         pointStrokeColor: "#fff",
-        data: [63, 64, 64, 64, 63, 64, 63, 62, 62, 61]
+        data: tempTwo
       }, {
         fillColor: "rgba(151,187,205,0.1)",
         strokeColor: "black",
-        pointColor: "rgba(151,187,205,1)",
+        pointColor: "black",
         pointStrokeColor: "#fff",
         data: tempOne
       }
@@ -43,12 +43,27 @@ $(document).ready(function() {
 
     function fetchAndRender() {
       $.get('http://tiny-pizza-server.herokuapp.com/collections/weather', function(response) {
-          nextData = _.first(response, 10);
+          nextData = _.first(response, 30);
           // console.log('response', nextData)
           tempOne = _.pluck(_.filter(nextData, function(weather) {
             return weather.location === 'conference room';
           }), 'temperature');
 
+          tempTwo = _.pluck(_.filter(nextData, function(weather) {
+            return weather.location === 'lecture hall';
+          }), 'temperature');
+
+          tempThree = _.pluck(_.filter(nextData, function(weather) {
+            return weather.location === 'lobby';
+          }), 'temperature');
+
+          timeUno = _.pluck(_.filter(nextData, function(weather) {
+            return weather.time;
+          }), 'time');
+
+          // timeOne= _.every((timeUno),moment().format("hh:mm:ss"));
+
+          // console.log(timeOne);
 
     
           console.log('tempOne', tempOne);
@@ -76,7 +91,7 @@ $(document).ready(function() {
           //   dataSetC.shift();
           // };
 
-          // Not sure why the scaleOverride isn't working...
+          // Not sure why the scaleOverride isn't working... 
           var optionsNoAnimation = {
             animation: false,
             //Boolean - If we want to override with a hard coded scale
