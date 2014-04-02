@@ -109,12 +109,12 @@ $(document).ready(function() {
             scaleOverride: true,
             //** Required if scaleOverride is true **
             //Number - The number of steps in a hard coded scale
-            scaleSteps: 18,
+            scaleSteps: 30,
             //Number - The value jump in the hard coded scale
-            scaleStepWidth: 1,
+            scaleStepWidth: .5,
             //Number - The scale starting value
-            scaleStartValue: 59,
-
+            scaleStartValue: 59.5,
+ 
             scaleFontFamily : "'Open Sans'",
   
             scaleFontSize : 14,
