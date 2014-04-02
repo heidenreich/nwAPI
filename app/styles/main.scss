@@ -197,13 +197,14 @@ footer {
 .logos{
     height: 100px;
     margin-left: 50px;
+    filter: gray;
+    -webkit-filter: grayscale(1);
 }
 
 .logos:hover{
 
-  -moz-box-shadow:    0px 0px 3px 3px #ccc;
-  -webkit-box-shadow: 0px 0px 3px 3px #ccc;
-  box-shadow:         0px 0px 3px 3px #ccc;
+  filter: none;
+  -webkit-filter: grayscale(0);
 
 }
 
