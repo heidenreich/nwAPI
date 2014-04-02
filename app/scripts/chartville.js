@@ -113,7 +113,11 @@ $(document).ready(function() {
             //Number - The value jump in the hard coded scale
             scaleStepWidth: 1,
             //Number - The scale starting value
-            scaleStartValue: 59
+            scaleStartValue: 59,
+
+            scaleFontFamily : "'Open Sans'",
+  
+            scaleFontSize : 14,
           }
     
           //Get the context of the canvas element we want to select
